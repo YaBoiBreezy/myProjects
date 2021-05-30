@@ -1,0 +1,22 @@
+doctype html
+head
+    title IMDB
+    link(rel='stylesheet' href='/stylesheet')
+body
+    include header
+    #homeBackground
+        #createContainer
+            span
+                h2 Featured Movies
+                if MovieData 
+                    for movie in MovieData
+                        #homeMovie
+                            a(href="/movies/"+movie.id)
+                                img.home(src=movie.Poster)
+            if ReccData
+                span
+                    h2 Recommended Movies 
+                    for movie in ReccData
+                        #homeMovie
+                            a(href="/movies/"+movie.id)
+                                img.home(src=movie.Poster)

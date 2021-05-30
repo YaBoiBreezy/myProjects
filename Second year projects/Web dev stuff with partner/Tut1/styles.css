@@ -1,0 +1,52 @@
+* {
+    background-color: black;
+    color: white;
+    margin: 2px;
+}
+
+h1 {
+    font-size:80px;
+    text-align:center;
+    color: yellow;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+a {
+    color: blue;
+    font-size: 25px;
+}
+
+#pirates {
+    font-size:60px;
+    text-align:center;
+    color:lightskyblue;
+}
+
+#lookUp {
+    text-align:center;
+    bottom:40px;
+}
+
+#actors{
+    font-size:20px;
+    text-align:center;
+}
+
+#subhead{
+    font-size:30px;
+    text-align:center;
+    color: lightseagreen;
+}
+
+#reviewer{
+    font-size:20px;
+    border: 2cm;
+    background-color: brown;
+}
+

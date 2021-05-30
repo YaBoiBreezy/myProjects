@@ -1,0 +1,13 @@
+doctype html 
+head 
+    title Add a Person 
+    link(rel='stylesheet' href='/stylesheet')
+body 
+    include header 
+    #homeBackground 
+        #createContainer
+            span
+                h3 Persons Name
+            input#newPersonName.createPage(size='64' placeholder='Enter a persons name..')
+            br
+            button#createPerson(onclick='addPerson()' style='display:block; margin:auto') Create Person

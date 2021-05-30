@@ -1,0 +1,25 @@
+doctype html
+head
+    title Sign up!
+    link(rel='stylesheet' href='/stylesheet')
+body
+    include header
+    #authenBackground
+        br
+        span
+            h1#authenWelcome Welcome Newcomer!
+        #headImage
+            img(src='/loginImg')
+            span Photo by 
+                a(href='https://unsplash.com/@dmjdenise?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText') Denise Jans 
+                | on 
+                a(href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText') Unsplash
+        #welcome
+            p Please create a username and password below to sign up.
+            a(href='/user/login') Or click here to login!
+        #user_pass
+            input#username(placeholder='Username: ')
+        #user_pass
+            input#password(type='password' placeholder='Password: ')
+        #loginSubmit
+            input(type='submit' onclick='signup()')

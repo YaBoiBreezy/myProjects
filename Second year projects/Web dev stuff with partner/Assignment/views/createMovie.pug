@@ -1,0 +1,50 @@
+doctype html 
+head 
+    title Create Movie 
+    link(rel='stylesheet' href='/stylesheet')
+body 
+    include header
+    #homeBackground
+        #createContainer
+            span
+                h3 Movie Title
+                input#createTitle.createPage(size='64' placeholder='Enter a movie title..')
+            span
+                h3 Movie Rating, Runtime and Release Date
+                input#createRating.createPage(size='64' placeholder='Enter a movie content rating..')
+                input#createRuntime.createPage(size='64' placeholder='Enter a movie runtime..')
+                input#createReleaseDate.createPage(size='64' placeholder='Enter a movie release date..')
+            span 
+                h3 Genres
+                input#createGenre.createPage(size='64' placeholder='Enter a genre to add..')
+                button#addGenre(onclick='addGenreToList()') Add genre
+                #genres
+            span
+                h3 Actors
+                input#createActors.createPage(rows='3' cols='66' placeholder='Enter an actors name..' oninput='person_find("createActors", "actorsFound")')
+                select#actorsFound(name="actors")
+                    option Select a person
+                button.addPerson(onclick='addPersonToList("actors", "actorsFound")') Add person
+                #actors
+            span
+                h3 Writers
+                input#createWriters.createPage(rows='3' cols='66' placeholder='Enter a writers name..' oninput='person_find("createWriters", "writersFound")')
+                select#writersFound(name="writers") 
+                    option Select a person
+                button.addPerson(onclick='addPersonToList("writers", "writersFound")') Add person
+                #writers
+            span
+                h3 Directors
+                input#createDirectors.createPage(rows='3' cols='66' placeholder='Enter a directors name..' oninput='person_find("createDirectors", "directorsFound")')
+                select#directorsFound(name="directors") 
+                    option Select a person
+                button.addPerson(onclick='addPersonToList("directors", "directorsFound")') Add person
+                #directors
+            span
+                h3 Plot
+                textarea#createDisc.createPage(rows='6' cols='66' placeholder='Enter a plot for this movie..')
+            span 
+                h3 Poster Link 
+                input#createPoster.createPage(size='64' placeholder='Enter a movie poster url..')
+            br
+            button#createMovie(onclick='addMovie()' style='display:block; margin:auto') Create Movie

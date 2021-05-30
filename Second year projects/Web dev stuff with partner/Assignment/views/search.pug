@@ -1,0 +1,26 @@
+doctype html
+head
+    title Login
+    link(rel='stylesheet' href='/stylesheet')
+body
+    include header
+    #homeBackground
+        #createContainer
+            span
+                h3 Similar people to search
+                if People.length != 0 
+                    for person in People
+                        a.name(href='/people/'+person.name) #{person.name}
+                else 
+                    p No similar actors!
+                h3 Similar movies to search
+                if MovieData.length != 0
+                    for movie in MovieData
+                        #homeMovie
+                            a(href="/movies/"+movie.id)
+                                img.home(src=movie.Poster)
+                else 
+                    p No similar movies!
+                br
+                button#pageBut(onclick='prevPage()') Previous page
+                button#pageBut(onclick='nextPage()') Next page

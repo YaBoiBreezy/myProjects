@@ -1,0 +1,67 @@
+doctype html
+head
+    if MovieData
+        title #{MovieData.Title}
+    link(rel='stylesheet' href='/stylesheet')
+    -let reviewIDs = JSON.stringify(MovieData.Reviews);
+body(onload='loadReviews('+reviewIDs+', "movie")')
+    include header
+    #movieBackground
+        if MovieData
+            .row
+                #movieImage
+                    img#poster(src=MovieData.Poster)
+                #createContainer
+                    span
+                        h2#movieTitle #{MovieData.Title}
+                    p Rated: #{MovieData.Rating}
+                    p Runtime: #{MovieData.Runtime}
+                    p Released: #{MovieData.ReleaseDate}
+                    p #{MovieData.Plot}
+                    p Directed by: 
+                    span
+                        for director in MovieData.Directors
+                            a.name(href='/people/'+director) #{director}
+                    p Written by:
+                    span
+                        for writors in MovieData.Writers 
+                            a.name(href='/people/'+writors) #{writors}
+                    span
+                        h3 Genres: 
+                    span
+                        for genr in MovieData.Genres
+                            a.name(href='/movie/search/'+genr) #{genr}
+                    span
+                        h3 Actors
+                    span
+                        for act in MovieData.Actors 
+                            a.name.actor(href='/people/'+act) #{act}
+                    span
+                        br
+                        if Watched == true
+                            button#addWatchlist(onclick='toggleWatched()') Remove from Watched
+                        else 
+                            button#addWatchlist(onclick='toggleWatched()') Add to Watched
+            #createContainer
+                span
+                    h3 Ratings and Reviews
+                if MovieData.Reviews.length != 0
+                    p Average rating: #{MovieData.AverageRating}/10
+                #reviews
+                br
+                span
+                    |Rating:
+                    input#reviewRating(type="number" min="1" max="10" placeholder='1-10')
+                span
+                    textarea#reviewTitle(name="", cols="50", rows="1" placeholder='Write a title...')
+                    textarea#reviewBody(name="", cols="50", rows="10" placeholder='Write a review...')
+                span
+                    button#createReview(onclick='addReview()') Create Review
+            #createContainer
+                span
+                    h3 Similar Movies 
+                    for movie in similar 
+                        #homeMovie
+                            a(href=movie.id)
+                                img.home(src=movie.Poster)
+                    

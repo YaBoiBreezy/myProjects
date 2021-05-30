@@ -1,0 +1,18 @@
+script(src='/client')
+#header
+    a#icon(href="/") 
+        h2 IMDB 
+    #srch
+        input#search(type='text' placeholder='Enter a title/genre/name: ')
+        button#subSearch(onclick='search()') Search
+    #login
+        if username
+            if notification > 0
+                p#logHead(style='color:rgb(241, 24, 24)') #{notification}
+            else 
+                p#logHead(style='color:rgb(0, 0, 0)') #{notification}
+            button#logHead(onclick='logout()') Signout
+            button#logHead(onclick='document.location="/users/'+username+'"') Account
+        else 
+            button#logHead(onclick='document.location="/user/login"') Login
+            button#logHead(onclick='document.location="/user/login"') Account

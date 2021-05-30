@@ -1,0 +1,516 @@
+html, body {
+    width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #172b17;
+    color: black;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+}
+
+a {
+    color:white;
+}
+
+p {
+    padding-top: 10px;
+    margin: auto;
+}
+
+span {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.createPage, textarea {
+    resize: vertical;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.unfollowContainer {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 5px;
+}
+
+.unfollowContainer input {
+    margin: auto;
+    display: inline;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+#homeBackground .name, #createContainer .name, .name {
+    display: inline;
+    padding: 0px 4px;
+}
+
+#movieBackground, #homeBackground, #authenBackground {
+    margin: auto;
+    width: 100%;
+    background-color: #68a33e;
+}
+
+#movieImage {
+    flex: 50%;
+}
+
+#movieImage img {
+    position: relative;
+    width: 64%;
+    margin: 2% auto;
+    top: 50%;
+    transform: translateY(-51.5%);
+}
+
+#createContainer {
+    width: 100%;
+    flex: 60%;
+}
+
+#createContainer h1, #createContainer p, #createContainer h3, #createContainer a{
+    text-align: center;
+}
+
+#genre {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+p.genr {
+    display: inline;
+    background-color: inherit;
+    width: 100%;
+    margin: 15px, auto;
+}
+
+#createContainer h1, #createContainer h2, #createContainer h3, #authenBackground h1 {
+    text-align: center;
+    padding: 4px;
+    margin: 20px auto;
+    border: 2px inset black;
+    background-color: #4555bd;
+    color: black;
+}
+
+#movieContainer {
+    margin: auto;
+    width: 80%;
+}
+
+#homeBackground img, #movieBackground span img {
+    display: inline;
+    margin: 5px;
+}
+
+#homeBackground input, #homeBackground textarea {
+    display: block;
+    margin: auto;
+}
+
+#poster {
+    border: 4px groove navajowhite;
+    border-radius: 0px;
+}
+
+/*HEADER STYLE START*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4px 0px;
+    background-color: #080808;
+}
+
+#header h2 {
+    float: left;
+    margin: auto;
+    text-align: center;
+    background-color: #080808;
+    color: #E6E600;
+}
+
+#header #srch {
+    display: flex;
+    width: 100%;
+    margin-left: 25px;
+}
+
+#header #search {
+    text-align: center;
+    flex-grow: 100;
+}
+
+#header #subSearch {
+    text-align: center;
+    float: right;
+}
+
+#login {
+    display: flex;
+    vertical-align: middle;
+}
+
+#login p{
+    margin: 0px;
+    background-color: rgb(250, 253, 239);
+}
+
+/*HEADER STYLE END*/
+
+#authenWelcome {
+    text-align: center;
+    padding: 50px 0px 0px;
+    color: rgb(197, 98, 16);
+}
+
+#welcome {
+    text-align: center;
+}
+
+#welcome a {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    font-size: 15px;
+}
+
+#headImage {
+    padding-bottom: 5%;
+}
+
+#user_pass {
+    text-align: center;
+    margin: 5px auto auto;
+    width: 40%;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: rgb(44, 43, 43);
+}
+
+#user_pass input{
+    width: 80%;
+}
+
+#loginSubmit {
+    text-align: center;
+    margin: 10px auto auto;
+    padding-bottom: 20px;
+    width: 50%;
+}
+
+#contribControls input{
+    display: inline;
+    margin: 0px 3px;
+}
+
+#reviews, #notifications {
+    grid-template-columns: auto auto auto;
+}
+
+#reviewedShort, #reviewedSpan {
+    display: inline;
+}
+
+#reviewedSpan {
+    border: 2px solid black;
+    margin-bottom: 5px;
+    color: black;
+    background-color: rgb(115, 91, 224);
+}
+
+#reviewedSpan p {
+    font-size: 15px;
+    margin: auto;
+    padding: 0px 5px;
+}
+
+#pageBut {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #homeMovie {
+        height: 200px;
+        width: 140px;
+        margin: auto 3px;
+        display: inline-block;
+    }
+    
+    img.home {
+        height: 95%;
+        width: 95%;
+    }
+
+    img {
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        padding-bottom: 8px;
+        width: 50%;
+    }
+
+    span {
+        width: 80%;
+    }
+
+    p, .actor, span a {
+        font-size: 15px;
+    }
+
+    #movieBackground, #homeBackground, #authenBackground {
+        margin: 10px auto;
+        width: 93%;
+        border: 15px dashed #5a8b36;
+    }
+
+    #homeBackground img:not(img.home), .unfollowContainer {
+        width: 28%;
+    }
+
+    img#watchlistMovie {
+        width: 98%;
+        margin: auto;
+    }
+
+    /*Begin Header Style*/
+    #header #srch {
+        width: 50%;
+    }
+
+    #header #subSearch {
+        width: 60px;
+        text-align: center;
+    }
+
+    #header #search {
+        width: 60%;
+        margin-left: 80px;
+    }
+
+    #header h2 {
+        padding: 4px;
+        margin-left: 5px;
+    }
+
+    #logHead, #subSearch {
+        padding: 4px;
+        margin-right: 0px;
+    }
+    /*End Header Style*/
+
+    #welcome a {
+        width: 50%;
+        font-size: 15px;
+    }
+
+    #headImage {
+        padding-top: 50px;
+        padding-bottom: 5%;
+    }
+
+    #headImage img {
+        width: 60%;
+    }
+
+    #user_pass {
+        margin-top: 5px;
+        width: 40%;
+        padding: 5px;
+    }
+
+    #user_pass input{
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #homeMovie {
+        height: 240px;
+        width: 180px;
+        margin: auto 3px;
+        display: inline-block;
+    }
+    
+    img.home {
+        height: 95%;
+        width: 95%;
+    }
+
+    img {
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        padding-bottom: 10px;
+        width: 65%;
+    }
+
+    span {
+        width: 90%;
+    }
+
+    p, .actor {
+        font-size: 20px;
+    }
+
+    #authenBackground {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 45%;
+    }
+
+    #movieBackground, #homeBackground {
+        margin: 25px auto;
+        width: 94%;
+        border: 25px dashed #5a8b36;
+    }
+
+    #homeBackground img:not(img.home), .unfollowContainer{
+        width: 18%;
+    }
+
+    img#watchlistMovie {
+        width: 98%;
+        margin: auto;
+    }
+
+    /*Begin Header Style*/
+    #header #srch {
+        width: 40%;
+    }
+
+    #header #search {
+        margin-left: 100px;
+    }
+
+    #header #subSearch {
+        width: 60px;
+    }
+
+    #icon h2 {
+        padding: 10px;
+        font-size: 40px;
+        margin-left: 10px;
+    }
+
+    #logHead, #subSearch {
+        padding: 4px;
+        margin-right: 0px;
+    }
+
+    #header {
+        padding: 5px 0px
+    }
+
+    /*End Header Style*/
+
+    /*Start Login/Signin Page*/
+    #welcome a {
+        width: 50%;
+        font-size: 15px;
+    }
+
+    #headImage {
+        padding-bottom: 30px;
+    }
+
+    #headImage img {
+        width: 65%;
+    }
+
+    #user_pass {
+        margin-top: 5px;
+        width: 50%;
+        padding: 5px;
+    }
+
+    #user_pass input{
+        width: 75%;
+    }
+    /*End Login/Signin Page*/
+}
+
+@media only screen and (min-width: 1200px) {
+    #homeMovie {
+        height: 280px;
+        width: 220px;
+        margin: auto 3px;
+        display: inline-block;
+    }
+    
+    img.home {
+        height: 95%;
+        width: 95%;
+    }
+
+    #search, #logHead{
+        padding: 5px 8px;
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (min-width: 1800px) {
+    #homeMovie {
+        height: 300px;
+        width: 240px;
+        margin: auto 3px;
+        display: inline-block;
+    }
+    
+    img.home {
+        height: 95%;
+        width: 95%;
+    }
+
+    #search, #logHead{
+        padding: 5px 8px;
+        font-size: 18px;
+    }
+}

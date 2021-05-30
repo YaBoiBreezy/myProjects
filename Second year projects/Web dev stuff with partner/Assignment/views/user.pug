@@ -1,0 +1,34 @@
+doctype html 
+head 
+    title #{UserData.username}
+    link(rel='stylesheet' href='/stylesheet')
+    -let movieID = JSON.stringify(UserData.moviesWatched);
+    -let reviews = JSON.stringify(UserData.reviews);
+body(onload='getIds('+movieID+', "moviesWatched"); loadReviews('+reviews+', "user")') 
+    include header 
+    #homeBackground
+        #createContainer
+            if UserData.username
+                span
+                    h1= UserData.username
+                    if UserData.followed == true
+                        button#followPerson(onclick='toggleFollow("user")') Unfollow
+                    else 
+                        button#followPerson(onclick='toggleFollow("user")') Follow
+                span 
+                    h3 People Followed
+                    if UserData.peopleFollowed.length != 0
+                        for followName in UserData.peopleFollowed 
+                            a.name(href='/people/'+followName) #{followName} 
+                        br
+                        a(href='/users/'+UserData.username+'/allPeopleFollowed') See all followed people
+                    else
+                        p No people followed!
+                span
+                    h3 Watched
+                    #moviesWatched
+                        p Loading movies...
+                span 
+                    h3 Reviews Written 
+                span
+                    #reviews

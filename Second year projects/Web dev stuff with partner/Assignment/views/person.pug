@@ -1,0 +1,45 @@
+doctype html 
+head 
+    title #{PersonData.name}
+    link(rel='stylesheet' href='/stylesheet')
+    -let moviesActed = JSON.stringify(PersonData.acted);
+    -let moviesWrote = JSON.stringify(PersonData.wrote);
+    -let moviesDirected = JSON.stringify(PersonData.directed);
+body(onload='getIds('+moviesActed+', "moviesActed"); getIds('+moviesWrote+', "moviesWrote"); getIds('+moviesDirected+', "moviesDirected")')
+    include header
+    #movieBackground
+        if PersonData 
+            #createContainer
+                span
+                    h1 #{PersonData.name}
+                    if followed 
+                        button#followPerson(onclick='toggleFollow("person")') Unfollow
+                    else 
+                        button#followPerson(onclick='toggleFollow("person")') Follow
+                if PersonData.acted.length != 0
+                    span
+                        h3 Movies Acted
+                        #moviesActed
+                            p Loading movies...
+                        br
+                        a(href='/people/'+PersonData.name+'/allMoviesActed') See all movies acted in
+                if PersonData.wrote.length != 0
+                    span
+                        h3 Movies Written
+                        #moviesWrote
+                            p Loading movies...
+                        br
+                        a(href='/people/'+PersonData.name+'/allMoviesWritten') See all movies written
+                if PersonData.directed.length != 0
+                    span 
+                        h3 Movies Directed
+                        #moviesDirected
+                            p Loading movies...
+                        br
+                        a(href='/people/'+PersonData.name+'/allMoviesDirected') See all movies directed
+                if collaborators.length != 0
+                    span 
+                        h3 Frequent Collaborators
+                        for collab in collaborators
+                            a.name(href='/people/'+collab.name) #{collab.name}
+                    br

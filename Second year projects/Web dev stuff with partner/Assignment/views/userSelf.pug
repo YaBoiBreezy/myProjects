@@ -1,0 +1,60 @@
+doctype html
+head 
+    title #{UserData.username}
+    link(rel='stylesheet' href='/stylesheet')
+    -let movieIds = JSON.stringify(UserData.moviesWatched);
+    -let reviews = JSON.stringify(UserData.reviews);
+    -let notifications = JSON.stringify(UserData.notifications);
+body(onload='drawWatched('+movieIds+'); loadReviews('+reviews+', "user"); loadNotifications('+notifications+')') 
+    include header 
+    #homeBackground
+        #createContainer
+            if username
+                span
+                    h1 Hello, #{username}
+                    #contribControls
+                        if UserData.contributingUser == true
+                            button#contributorOn(onclick='toggleContributing()') Contributor mode off
+                        else 
+                            button#contributorOn(onclick='toggleContributing()') Contributor mode on
+                        button#createMovie(onclick='createThing("/movie")') Create a new movie
+                        button#createPerson(onclick='createThing("/person")') Create a new person
+                span 
+                    h3 Notifications
+                    #notifications
+                span 
+                    h3 People Followed
+                    if UserData.peopleFollowed.length != 0
+                        for personFollowName in UserData.peopleFollowed 
+                            span.unfollowContainer(id=personFollowName+'1')
+                                a.name(id=personFollowName href='/people/'+personFollowName) #{personFollowName}
+                                input.unfollow(id=personFollowName type='submit' value='Unfollow' onclick='unfollow("/people/'+personFollowName+'/follow", "'+personFollowName+'1")')
+                        br
+                        a(href='/users/'+username+'/allPeopleFollowed') See all followed people
+                    else 
+                        p No people followed
+                span
+                    h3 Users Followed
+                    if UserData.usersFollowed.length != 0
+                        for userFollowName in UserData.usersFollowed 
+                            span.unfollowContainer(id=userFollowName+'1')
+                                a.name(id=userFollowName href='/users/'+userFollowName) #{userFollowName}
+                                input.unfollow(id=userFollowName type='submit' value='Unfollow' onclick='unfollow("/users/'+userFollowName+'/follow", "'+userFollowName+'1")')
+                        br
+                        a(href='/users/'+username+'/allUsersFollowed') See all followed users
+                    else
+                        p No users followed
+                if ReccData
+                    span
+                        h3 Recommended Movies
+                        for movie in ReccData
+                            #homeMovie
+                                a(href='/movies/'+movie.id)
+                                    img.home(src=movie.Poster alt=movie.id title=movie.id)
+                span
+                    h3 Watched Movies
+                    #moviesWatched
+                        p Loading movies...
+                span 
+                    h3 Reviews Written
+                    #reviews 

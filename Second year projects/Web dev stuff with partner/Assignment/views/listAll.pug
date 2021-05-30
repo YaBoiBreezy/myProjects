@@ -1,0 +1,30 @@
+doctype html 
+head
+    title Full #{dataType} List
+    link(rel='stylesheet' href='/stylesheet' type='text/css')
+if dataLink == '/movies/'
+    -let titles = JSON.stringify(dataList);
+    body(onload='getIds('+titles+', "list")')
+        include header 
+        #homeBackground 
+            #createContainer 
+                span 
+                    if name
+                        h2 #{name}'s #{dataType}
+                    else 
+                        h2 #{username}'s #{dataType}
+                    #list
+                        p Loading...
+else
+    body 
+        include header 
+        #homeBackground 
+            #createContainer 
+                span 
+                    if name
+                        h2 #{name}'s #{dataType}
+                    else 
+                        h2 #{username}'s #{dataType}
+                span
+                    for object in dataList 
+                        a.name(href=dataLink+object) #{object}
