@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="client.js"></script>
+        <title>Tut3</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>IMDB</h1>
+
+        <div class="buttonDiv">
+            <div>
+                <input type="text" id="movie-key" name="movie" placeholder="Enter a movie">
+                <input type="submit" id="search" value="Search Movie" onclick="searchMovie()">
+            </div>
+        </div>
+        <div id='movieDiv'>
+            <div id='subMovieDiv'>
+                <img id="poster" style="visibility: hidden">
+                <p id="title" style="visibility: hidden"></p>
+                <p id="rel-year" style="visibility: hidden"></p>
+                <p id="runtime" style="visibility: hidden"></p>
+                <p id="actors" style="visibility: hidden"></p>
+                <div id="cur-reviews" style="visibility: hidden"></div>
+            </div>
+        </div>
+        
+
+        <div class="buttonDiv">
+            <div>
+                <input type="text" id="user-name" name="name" placeholder="Name">
+                <input type="text" id="movie-score" name="score" placeholder="Rating 0-10">
+                <input type="text" id="review-text" name="review" placeholder="Enter a review">
+                <input type="submit" id="submit-review" value="Add Review" onclick="addNewReview()">
+            </div>
+        </div>
+        <div id="user-reviews"></div>
+
+    </body>
+</html>

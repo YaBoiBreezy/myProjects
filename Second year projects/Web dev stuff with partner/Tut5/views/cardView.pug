@@ -1,0 +1,46 @@
+doctype html
+head
+    title #{name}, #{id}
+    link(rel="stylesheet" type="text/css" href="css/style.css")
+body 
+    #container
+        #text
+            h1 #{name}
+            p #{flavor}
+            h3 Health #{health}, Attack #{attack}, Cost #{cost}
+            h2 ID 
+            p #{id}
+            h2 Class 
+            p #{cardClass}
+            h2 Set 
+            p #{set}
+            h2 Type 
+            p #{type}
+            h2 Artist 
+            p #{artist}
+            h2 Description
+            p !{text}
+            br
+            if rarity
+                -if (rarity === "FREE")
+                    h4 Rarity
+                    p *
+                -else if (rarity === "COMMON")
+                    h4 Rarity
+                    p **
+                -else if (rarity === "RARE")
+                    h4 Rarity
+                    p ***
+                -else if (rarity === "EPIC")
+                    h4 Rarity
+                    p ****
+                -else if (rarity === "LEGENDARY")
+                    h4 Rarity 
+                    p *****
+            if mechanics
+                h4 Mechanics
+                each mechanic in mechanics 
+                    p= mechanic
+                br
+            h4 Collectible
+            p #{collectible}

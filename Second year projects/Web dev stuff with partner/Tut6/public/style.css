@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    color: white;
+    background-color: #fd9c97;
+}
+
+a {
+    display: block;
+    width: 50%;
+    margin: 35px auto;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+
+}
+
+.recipeLink {
+    font-size: 30px;
+    border: 4px black;
+    border-style: dashed dashed double double;
+    
+}
+
+.mainLink {
+    text-align: center;
+    border: 3px solid black;
+}
+
+#recipeContainer {
+    height: 60%;
+    width: 60%;
+    transform: translate(40%, 20%);
+    background-color: #1c99ffad;
+    border: 4px dotted #1975c0ea;
+}
+
+#mainContainer {
+    width: 60%;
+    height: 700px;
+    margin: 30px auto;
+    background-color: #1c99ffad;
+    border: 4px dotted #1669adea;
+}

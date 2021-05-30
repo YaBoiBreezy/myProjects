@@ -1,0 +1,44 @@
+Detailed Outline of Data Model
+
+Every object(movie, user, person) will have a page, so to link to an object 
+we will use the object’s name to generate a URL for the HREF link. (ex. /users/{name} = /users/xXsteveXx)
+
+Reviews will be stored using ID’s, each ID will be in the user who made the review, and the movie the review is for. 
+Whenever either the movie or user is requested, all reviews corresponding to said user/movies’s review ID’s will be sent with the user/movie’s data.
+
+MovieData:
+String title			          //stores the movie title, used in URL
+Int year			              //year the movie was released
+Int ratingAverage		        //mean of all ratings ( /10 )
+Int runtime			            //length of the movie
+String plot			            //paragraph about the movie’s plot
+String genreKeywords []     //array of keywords for genres, each one a link to /search/{keyword}
+String directors []		      //array or directors, each name can link to /person/{name}
+String writers []		        //array of writers, each name can link to /person/{name}
+String actors []			      //array of actors, each name can link to /person/{name}
+Int reviews []			        //array of review ID’s for reviews for this movie
+
+PersonData:
+String name		              //name of person
+String acted []	            //names of movies this person acted in, each name can link to /movies/{name}
+String wrote []	            //names of movies this person wrote, each name can link to /movies/{name}
+String directed []          //names of movies this person directed, each name can link to /movies/{name}
+
+UserData:
+String username		          //for logins and for displaying the user’s identity
+String password		          //for logins
+String peopleFollowed []	  //list of people this user follows, each can link to /person/{name}
+String usersFollowed []	    //list of users this user follows, each can link to /user/{name}
+String moviesWatched []	    //list of movies this user watched, each can link to /movie/{name}
+String peopleFollowed []	  //list of people this user follows, each can link to /person/{name}
+String notifications []		  //list of all notifications for this user
+Int reviews []			        //array of review ID’s for reviews this user made.
+
+ReviewData:
+String user 		            //user who made the review
+String movie 		            //the movie being reviewed
+Sring shortReview         	//short part of review (title)
+String longReview	          //long part of review
+Int rating		              //1-10 score
+Int ID			                //unique review ID for finding in database, stored in user/movie
+

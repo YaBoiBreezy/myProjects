@@ -1,0 +1,88 @@
+all these HTML things also indicate JS requirements, which are tabbed
+
+Probably make top bar for:
+site name     search bar      login/logout/create account/personal page
+If contributing user, add buttons for adding movie/person
+
+REQUIRED HTML PAGES:
+View movie:
+title, year, rating average, runtime, plot, etc.
+genre keywords, link to search for said keyword
+see directors, writers, actors, all link to respective pages
+list similar movies (algorithm)
+add/remove from watched list
+see reviews
+add big review (1-10, short text, long text).
+    if no text, just 1-10, then add as short review
+
+view person:
+director/writer/actor, one person per name
+Acted, wrote, directed (diff sections): each movie links to said page
+  If category=empty, don't show
+frequent collaborators (list of 5 people)
+  most frequent names in all movies in person's history
+ Follow/unfollow: receive notification when new movie with this person is added
+
+view personal page:
+When logged in, on personal page:
+  swap between normal and contributing user
+  see/manage people they follow (link to pages, stop following)
+  see/manage users they follow (link to pages, stop following)
+  see/manage watched movies (link to pages, undo watched)
+  list recommended movies (use reviews left, people/users followed to make algorithm)
+  see notifications from followed people/users: people for new movies, user for reviews made. Can unfollow from list
+
+view user:
+see all reviews made
+see all people followed (link)
+see watched list (link)
+follow/unfollow (notified when new review posted)
+
+login/logout/
+new acc:
+take a username and password
+  usernames must be unique
+  only one acc logged in at a time on a browser
+  new user is regular by default, not contributing
+
+add new movie:
+  When contributing user, button on top bar
+  title, release year, runtime, plot, genre keywords, and at least one writer, director, and actor
+    search for people must be dynamic, add person as writer/director/actor directly from search bar
+    notification to all followers of people in this movie
+
+add new person:
+  When contributing user, button on top bar
+  specify name, if name already exists then no.
+
+movie search:
+global search bar at top of screen
+search for movies (actor name, genre, movie name). when enter, go to this page
+show first 10 and have next/prev
+
+
+We also need server interaction, MongoDB, etc. all run with "npm install" and nothing else.
+
+For HTTP, we need:
+get movie
+get user 
+get personal account
+get person
+login page
+login (obviously can fail, handle it)
+new account (obviously can fail, handle it)
+Movie search (for all searches pretty much)
+add/remove from watched list
+add review
+follow/unfollow user
+follow/unfollow person
+add movie
+add person
+dynamic search for add movie
+maybe refresh every few seconds to see new notifications, display on top bar?
+
+Marks:
+50% meeting requirements
+10% looks
+15% database
+25% HTTP/NodeJS

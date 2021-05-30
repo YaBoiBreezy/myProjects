@@ -1,0 +1,15 @@
+doctype html 
+head 
+    title #{name}
+    link(rel="stylesheet" type="text/css" href="../style.css")
+body 
+    #recipeContainer
+        h1 #{name}
+        ul 
+            for ingre in ingredients
+                li= ingre.name + ", " + ingre.amount + " " + ingre.unit
+        h3 Preptime: #{preptime}
+        h3 Cooktime: #{cooktime}
+        p #{description}
+        p ID: #{id}
+        a.mainLink(href="/recipes") Back to Recipe Book

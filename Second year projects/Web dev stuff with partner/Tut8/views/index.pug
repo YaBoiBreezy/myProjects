@@ -1,0 +1,32 @@
+html
+	head
+		title Card Searcher
+		script(src='client.js')
+	body(onload='init()')
+		h1 Card Database
+
+		p Enter data into the filter form below and hit refresh to find matching cards.
+
+		p Artist:
+			input#artist(type="textbox")
+		p Name:
+			input#name(type="textbox")
+		p Min Attack:
+			input#minattack(type="textbox")
+		p Max Attack:
+			input#maxattack(type="textbox")
+		p Min Health:
+			input#minhealth(type="textbox")
+		p Max Health:
+			input#maxhealth(type="textbox")
+		p Class:
+			select#class
+				for clName in classes 
+					option(value=clName) #{clName}
+		p Rarity:
+			select#rarity
+				for rareName in rarities
+					option(value=rareName) #{rareName}
+		button#refresh(type="button" onclick='reqCards()') Refresh Results
+
+		div#results

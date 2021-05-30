@@ -1,0 +1,10 @@
+doctype html 
+head 
+    title Recipes 
+    link(rel="stylesheet" type="text/css" href="../style.css")
+body 
+    #mainContainer
+        br
+        for key in keys
+            a.recipeLink(href="/recipes/"+key.id) (#{key.id}) #{key.name} 
+        a.recipeLink(href="/") Back to Home Page

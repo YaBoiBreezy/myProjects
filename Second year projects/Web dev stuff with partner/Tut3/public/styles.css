@@ -1,0 +1,50 @@
+* {
+    background-color: black;
+    color: white;
+    margin: 2px;
+}
+
+h1 {
+    font-size:80px;
+    text-align:center;
+    color: yellow;
+}
+
+p {
+    margin: 1px;
+    font-size: 20px;
+}
+
+img {
+    display: block;
+    margin: 2px auto;
+}
+
+.buttonDiv {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.buttonDiv > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cur-reviews {
+    margin: 1px;
+    font-size: 25px;
+}
+
+#movieDiv, #subMovieDiv {
+    width: 50%;
+    margin: 40px auto;
+}
+
+#user-reviews {
+    padding: 20px;
+    text-align: center;
+}

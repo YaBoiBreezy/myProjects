@@ -1,0 +1,303 @@
+The server will store:
+Movies
+People
+Users
+
+
+URL/Pattern: /client.js
+HTTP METHOD: GET
+Description:
+Gets all the site js
+Supported Query Parameters:
+None
+Expected Request Body Data:
+None
+Supported Response Data Types:
+application/js
+Expected Response (Success):
+Status code of 200
+Javascript file
+
+
+URL/Pattern: /movies/{name}
+HTTP METHOD: GET
+Description:
+Retrieves a movie
+Supported Query Parameters:
+name (string) - a movie will match if it has the corresponding name
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/html
+Expected Response (Success):
+Status code of 200
+HTML displaying a movie, a list of recommended movies, and whether or not the user has watched it.
+
+
+URL/Pattern: /movies/search/{input, page}
+HTTP METHOD: GET
+Description:
+gets 10 movies related to the user’s search term
+Supported Query Parameters:
+Input (string) - whatever the user typed into the search bar
+Page (int) - the page number the user is on
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/html
+Expected Response (Success):
+Status code of 200
+An HTML list of 10 movie titles and image links, each linking to their movie page
+
+
+URL/Pattern: /user/{username}
+HTTP METHOD: GET
+Description:
+Gets the given user’s page
+Supported Query Parameters:
+username (string) - the name of the user being searched for
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/html
+Expected Response (Success):
+Status code of 200
+An HTML page containing the user’s data, including all reviews left. 
+Omits user’s notifications, password
+
+
+URL/Pattern: /user/self
+HTTP METHOD: GET
+Description:
+Gets user’s own page
+Supported Query Parameters:
+None
+Expected Request Body Data:
+Username (string) - the name of the user toggling this
+Password (string) - the user’s password
+Supported Response Data Types:
+text/html
+Expected Response (Success):
+Status code of 200
+An HTML page containing all the user’s data, except password.
+Page also contains a list of movie titles+pictures, recommended by the server
+
+
+URL/Pattern: /person/{name}
+HTTP METHOD: GET
+Description:
+Gets a person’s page
+Supported Query Parameters:
+Name (string) - the name of the person
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/html
+Expected Response (Success):
+Status code of 200
+An HTML page of that person’s data
+Also contains 5 person links for most frequent collaborations
+
+
+URL/Pattern: /user/login/page
+HTTP METHOD: GET
+Description:
+Displays the login page for the user
+Supported Query Parameters:
+None
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/HTML
+Expected Response (Success):
+Status code of 200
+An HTML page for logging in
+
+
+URL/Pattern: /user/login
+HTTP METHOD: GET
+Description:
+Sends the given username/password, if correct then returns user’s followed people/users, watched movies
+Supported Query Parameters:
+None
+Expected Request Body Data:
+Username (string) - the user’s given username
+Password (string) - the user’s given password
+Supported Response Data Types:
+application/json
+Expected Response (Success):
+Status code of 200
+An object of the user’s watched movies, followed users/people
+Expected Response (Failure):
+Status code 404   (incorrect username/password)
+
+
+URL/Pattern: /user/create/page
+HTTP METHOD: GET
+Description:
+Displays the create account page for the user
+Supported Query Parameters:
+None
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/HTML
+Expected Response (Success):
+Status code of 200
+An HTML page for creating an account
+
+
+URL/Pattern: /user/create
+HTTP METHOD: POST
+Description:
+Makes a new account
+Supported Query Parameters:
+None
+Expected Request Body Data:
+Username (string) - the user’s given username
+Password (string) - the user’s given password
+Supported Response Data Types:
+application/json
+Expected Response (Success):
+Status code of 200
+Expected Response (Failure):
+Status code 409	(conflict, username already exists)
+
+
+URL/Pattern: /user/watched
+HTTP METHOD: PATCH
+Description:
+Toggles whether or not the user has “watched” a movie
+Supported Query Parameters:
+none
+Expected Request Body Data:
+Username (string) - the name of the user toggling this
+Password (string) - the user’s password
+Movie (string) - the name of the movie to be toggled
+Supported Response Data Types:
+None
+Expected Response (Success):
+Status code of 200
+
+URL/Pattern: /person/follow
+HTTP METHOD: PATCH
+Description:
+Toggles whether or not the user “follows” a person
+Supported Query Parameters:
+none
+Expected Request Body Data:
+Username (string) - the name of the user toggling this
+Password (string) - the user’s password
+Person (string) - the name of the person to be toggled
+Supported Response Data Types:
+None
+Expected Response (Success):
+Status code of 200
+
+URL/Pattern: /user/follow/user
+HTTP METHOD: PATCH
+Description:
+Toggles whether or not the user “follows” a user
+Supported Query Parameters:
+none
+Expected Request Body Data:
+Username (string) - the name of the user toggling this
+Password (string) - the user’s password
+User (string) - the name of the user to be toggled
+Supported Response Data Types:
+None
+Expected Response (Success):
+Status code of 200
+
+
+URL/Pattern: /movie/add/review
+HTTP METHOD: POST
+Description:
+Adds a new review to a movie and the user making the review
+Supported Query Parameters:
+None
+Expected Request Body Data:
+Username (string) - the name of the user making the review
+Password (string) - the user’s password
+Rating (int) - The 1-10 star review
+shortRev (string) - the title of the review	(may be empty)
+longRev (string) - the review itself		(may be empty)
+Supported Response Data Types:
+None
+Expected Response (Success):
+Status code of 200
+
+
+URL/Pattern: /person/search/dynamic/{input}
+HTTP METHOD: GET
+Description:
+Gets a few people with names corresponding to the user's entered text
+Supported Query Parameters:
+input (string) - what the user has typed so far
+Expected Request Body Data:
+None
+Supported Response Data Types:
+application/json
+Expected Response (Success):
+Status code of 200
+json of the names of a few people
+
+
+URL/Pattern: /movie/add/page
+HTTP METHOD: GET
+Description:
+Gets the “add movie” page
+Supported Query Parameters:
+None
+Expected Request Body Data:
+None 
+Supported Response Data Types:
+text/HTML
+Expected Response (Success):
+Status code of 200
+An HTML page for adding a new movie
+
+
+URL/Pattern: /movie/add
+HTTP METHOD: POST
+Description:
+Creates a new movie
+Supported Query Parameters:
+None
+Expected Request Body Data:
+application/json of a new movie
+Supported Response Data Types:
+None 
+Expected Response (Success):
+Status code of 200
+
+
+URL/Pattern: /person/add/page
+HTTP METHOD: GET
+Description:
+Gets the “add person” page
+Supported Query Parameters:
+None
+Expected Request Body Data:
+None
+Supported Response Data Types:
+text/HTML
+Expected Response (Success):
+Status code of 200
+An HTML page for adding a new person
+
+
+URL/Pattern: /person/add
+HTTP METHOD: POST
+Description:
+Adds a person to the server
+Supported Query Parameters:
+None
+Expected Request Body Data:
+application/json of a new person
+Supported Response Data Types:
+None
+Expected Response (Success):
+Status code of 200
+Expected Response (Failure):
+Status code of 409	(conflict, user already exists)

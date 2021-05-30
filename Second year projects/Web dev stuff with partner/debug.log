@@ -1,0 +1,3 @@
+[0126/143542.026:ERROR:file_io_win.cc(180)] CreateFile C:\Users\Dylan\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
+[0126/143542.035:ERROR:registration_protocol_win.cc(130)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0126/143542.037:ERROR:file_io_win.cc(180)] CreateFile C:\Users\Dylan\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
