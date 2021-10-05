@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=”utf-8”>
+	<title>ParlVuPrototype</title>
+	<meta name=”Alexander_Breeze”>
+	<link rel="stylesheet" type="text/css" href="Colours.css">
+	<script src="Logic.js"></script>
+</head>
+<Body>
+
+<div id="topbar">
+	<a href="https://parlvu.parl.gc.ca/Harmony/en/View/UpcomingEvents">
+    		<img src="Assets\TopBanner.png" id="topBarPic"/>
+	</a>
+</div>
+
+<div id="outer-container">
+	<div id="sidebar">
+		<img src="Assets\SidebarPic.png" id="leftColPic"/>
+	</div>
+	<div id="content">
+		<div id="vidbar">
+			<p id="vidDescription"><b>HoC Sitting No. 61</b></p>
+			<div id="greenBox">
+				<p id="vidStatus"><b>In Progress</b></p>
+			</div>
+		</div>
+		<div id="videoPlayer">
+			<div id="video">
+				<p id="audioOnly">AUDIO ONLY</p>
+				<video id="mainStream" width=100% height=100% poster="Assets/HoC.jfif" style="visibility:visible;">
+					<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4"/>
+					<source src="blob:https://parlvu.parl.gc.ca/0cafb69b-1278-46f8-8624-5a636ddd10a1">
+					<source src="video-tag-demo.ogg" type="video/ogg">
+					Video tag is not supported in this browser.
+				</video>
+			</div>
+			<div id="vidPositionBar">
+				<input id="seekSlider" type="range" min="0" max="1000" value="0" step="1">
+			</div>
+			<div id="videoControlsBar">
+				<img id="playPauseButton" src="Assets/play.png">
+				<img id="skipB" src="Assets/back.png">
+				<img id="skipF" src="Assets/forward.png">
+				<span id="volPopupHandler"></span>
+				<img id="volume" src="Assets/soundNone.png">
+				<input id="volSlider" type="range" min="0" max="100" value="50" step="1">
+				<span id="timeNum"><span id="curTimeText"></span> / <span id="durTimeText"></span></span>
+				
+				<img id="fullScreen" src="Assets/fullscreenY.png">
+				<img id="download" src="Assets/download.png">
+				<img id="share" src="Assets/share.png">
+				<img id="settings" src="Assets/settings.png">
+				<img id="subs" src="Assets/subs.png">
+				<img id="videoAudio" src="Assets/videoOnly.png">
+			</div>
+		</div>
+		<div id="infobar">
+			<img src="Assets\clock.png" id="clockPic"/>
+			<p id="infoHeader"><b>Info</b><p/>
+		</div>
+		<div id="info">
+			<span style="line-height:1.4">
+			<p><span style="color:grey;">Description</span><br/>
+			Sitting No. 61 House of Commons<p/>
+			<p><span style="color:grey;">location</span><br/>
+			West Block - Chamber<p/>
+			<p><span style="color:grey;">Scheduled</span><br/>
+			Tuesday, Sep 14, 2021<br/>12:00 - 12:30<br/>30 Minutes<p/>
+			<p><span style="color:grey;">Actual</span><p/>
+			<p><span style="color:grey;">Contact</span><p/>
+			<p>Information<p/>
+			<p><a href="mailto:parlvusupport@parl.gc.ca" style="color:black;text-decoration:none;">parlvusupport@parl.gc.ca</a></br>
+			<a href="http://www.ourcommons.ca/About/HistoryArtsArchitecture/carillon/programme-e.htm" style="color:black;text-decoration:none;">Information website<a/><p/>
+			<p>Support<p/>
+			<p><a href="mailto:parlvusupport@parl.gc.ca" style="color:black;text-decoration:none;">parlvusupport@parl.gc.ca<a/><p/>
+			</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

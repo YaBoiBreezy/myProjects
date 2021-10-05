@@ -1,0 +1,269 @@
+/*This is the css for the new ParlVU prototype by Alex Breeze*/
+
+/*This gets rid of white borders and the scrollbar (overflow:hidden;)*/
+html, body { margin: 0; padding: 0; height: 100%;font-family: Arial;}
+
+#topbar {
+  	background-color: #898989;
+  	position: absolute;
+  	top: 0;
+  	width: 100%;
+	height: 60px;
+}
+
+#topBarPic {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 60px;
+	width: auto;
+}
+
+#outer-container {
+	width: 100%;
+	height: 1500px;
+	margin-top: 60px;
+	overflow: hidden;
+}
+
+#sidebar {
+	width: 298px;
+	height: 1500px;
+	background-color: #616161;
+}
+
+#leftColPic {
+	position: absolute;
+	top: 65px;
+	left: 5px;
+	width: 290px;
+	height: auto;
+}
+
+#content {
+	position: absolute;
+	top: 85px;
+	left: 310px;
+    	right: 12px;
+	height: 100%;
+}
+
+#vidbar {
+  	position: relative;
+	float: top;
+  	width: 100%;
+	height: 60px;
+	background-color: #f0f0f0;
+}
+
+#vidDescription {
+	position: absolute;
+	left: 20px;
+	color: DeepSkyBlue;
+	font-size: 20px;
+}
+
+#greenBox {
+	position: relative;
+  	float: right;
+  	width: 200px;
+	height: 100%;
+	background-color: green;
+}
+
+#vidStatus {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+#videoPlayer {
+	position: relative;
+  	float: top;
+  	width: 100%;
+	height: min-content;
+}
+
+#audioOnly {
+	visibility: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -125px;
+	top: 50%;
+	margin-top: -20px;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+
+#video {
+	top: 0;
+	left: 0;
+  	width: 100%;
+	height: min-content;
+	background-color: black;
+	background-color: #2a2a2a;
+}
+
+#vidPositionBar {
+	position: absolute;
+	bottom: 30px;
+	height: 30px;
+	width: 100%;
+	cursor: pointer;
+}
+
+#seekSlider {
+	width: 100%;
+	cursor: pointer;
+}
+
+#videoControlsBar {
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	width: 100%;
+}
+
+#playPauseButton {
+	position: absolute;
+	left: 10px;
+	bottom: 12px;
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+}
+
+#skipB{
+	position: absolute;
+	left: 40px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#skipF {
+	position: absolute;
+	left: 70px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#volPopupHandler {
+	position: absolute;
+	left: 100px;
+	bottom: 12px;
+	width: 200px;
+	height: 20px;
+	display: none;
+}
+
+#volume {
+	position: absolute;
+	left: 100px;
+	bottom: 12px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#volSlider {
+	position: absolute;
+	left: 135px;
+	bottom: 12px;
+	width: 100px;
+	cursor: pointer;
+	display: none;
+}
+
+#timeNum {
+	position: absolute;
+	left: 140px; 	//140, 245    245px;	//140 but make room for vol slider
+	bottom: 14px;
+	color: white;
+	letter-spacing: -1px;
+}
+
+#fullScreen {
+	position: absolute;
+	right: 10px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#download {
+	position: absolute;
+	right: 50px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#share {
+	position: absolute;
+	right: 90px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#settings {
+	position: absolute;
+	right: 130px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#subs {
+	position: absolute;
+	right: 170px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#videoAudio {
+	position: absolute;
+	right: 210px;
+	bottom: 14px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+}
+
+#infobar {
+	position: relative;
+  	float: top;
+  	width: 100%;
+	height: 60px;
+	background-color: #b8b8b8;
+}
+
+#clockPic {
+	width: auto;
+	height: 60px;
+}
+
+#infoHeader {
+	position: absolute;
+	left: 70px;
+	top: 5px;
+	color: white;
+}
+
+#info {
+	position: relative;
+  	float:top;
+  	width: 100%;
+	height: min-content;
+}
