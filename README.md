@@ -13,3 +13,4 @@ University C code: (linux)
 Made a bunch of general data handlers using structs, including arraylists and linked lists. Made projects using threads and ports, to simulate things racing up a mountain while enemies came down. Final project was importing data from a file, storing it, sorting it, and displaying reports. All code was separated into .h and .c files, and had a ReadMe.txt.
 
 University C++ code: (linux)
+A lot of proper object-oriented code with storage, input-output, control and action object types, oop diagrams, etc. Used advanced data handlers like custom maps, custom object operators (if(hare<apple)), dynamic memory allocation and deallocation.
