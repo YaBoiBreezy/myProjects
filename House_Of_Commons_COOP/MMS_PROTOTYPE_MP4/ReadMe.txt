@@ -1,8 +1,9 @@
+Note: this is a basic webiste with video player and custom controls (as in I coded every button individually)
+This was the version right before I used external libraries to accept .M3U8 streams, and improved the entire site
+
 Proof of concept for proposed changes to ParlVU media player
 Created by Alexander Breeze, COOP student working for David Turner in HoC MMS
 Started 2021-Sep-10
-Finished before christmas (hopefully)
-https://www.youtube.com/watch?v=V8_wEZD160g&list=PL00952AC35D0A4701&index=93
 
 Includes:
 Assets 							folder of pictures
