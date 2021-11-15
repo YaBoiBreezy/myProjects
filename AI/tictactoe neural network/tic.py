@@ -158,7 +158,7 @@ def minimax(board,piece):
 
 class Hybrid:
     def move(self,board,piece):
-        if random.uniform(0,10)>5:
+        if random.uniform(0,10)>=difficulty/10:
             rand.move(board,piece)
         else:
             minimax.move(board,piece)
@@ -199,6 +199,7 @@ for x in range (100):
 mutationRate=0.001
 numGames=1
 epochs=0
+difficulty=0
 
 %matplotlib inline
 import matplotlib.pyplot as plt
@@ -206,7 +207,7 @@ plt.style.use('classic')
 xAxis = [3000,0,0]
 yAxis = [100,100,0]
 
-while():
+while(difficulty<95):
     epochs+=1
     for net in range (100):
         for game in range (numGames):
