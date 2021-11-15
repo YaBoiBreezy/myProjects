@@ -1,7 +1,12 @@
 Proof of concept for proposed changes to ourcommons media player
 Created by Alexander Breeze, COOP student working for David Turner in HoC MMS
 Started 2021-Oct-19
-Finished 2021-Nov-IDK_YET
+Finished 2021-Nov-1
+NOTE: this requires node_modules. do:
+npm init
+npm install --save @videojs/http-streaming
+npm install --save videojs-contrib-quality-levels
+npm install --save videojs-contrib-hls
 
 Includes:
 Assets 						folder of pictures
