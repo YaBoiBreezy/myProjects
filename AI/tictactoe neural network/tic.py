@@ -1,3 +1,14 @@
+#Copied from previous attempt, added a thing where it only plays one game per AI, saves the top 30 for breeding (and 20 randoms). If more than 30 play perfectly, 
+#instead of rebreeding (and possibly losing a perfect AI in favor of imperfect ones that got lucky) it ups the number of games. If I get 31 perfect AI's 
+#it will enter an infinite loop, but I don't think it will get that far and if it does I will consider it a success. 
+#This also makes it run faster (in theory), because the amount of games it plays (processing time) is dynamically minimal, not statically arbitrary. 
+#(each epoch advances less because less games means a less accurate fitness function, but overall it should still be better.
+
+#edit: made it so if numGames gets too high it ups difficulty, when difficulty maxes out it is considered complete, and lets you play the champion.
+
+#I will import my minimax code, store every option in a dictionary (hashmap) for speed and use that as the opponent too, with hybrid class shifting between minimax and random
+
+
 import numpy as np
 import random
 
@@ -200,6 +211,7 @@ mutationRate=0.001
 numGames=1
 epochs=0
 difficulty=0
+difficultyMilestone=5
 
 %matplotlib inline
 import matplotlib.pyplot as plt
