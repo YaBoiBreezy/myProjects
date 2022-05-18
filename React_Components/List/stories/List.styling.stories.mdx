@@ -1,0 +1,99 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { List } from '../..';
+
+<Meta title="Components/List/Styling" component={List} />
+
+export const ListUnorderedTemplate = (args) => {
+  return (
+    <List {...args}>
+      <li>element 1</li>
+      <li>element 2</li>
+      <li>element 3</li>
+    </List>
+  );
+};
+export const ListConcatTemplate = (args) => {
+  return (
+    <List>
+      <li>element 1</li>
+      <List {...args}>
+        <li>element 1.1</li>
+        <li>element 1.2</li>
+        <li>element 1.3</li>
+      </List>
+    </List>
+  );
+};
+export const ListDefinitionTemplate = (args) => {
+  return (
+    <List type="dl" {...args}>
+      <dt>cat</dt>
+      <dd>small furry feline</dd>
+      <dt>dog</dt>
+      <dd>large furry canine</dd>
+    </List>
+  );
+};
+
+# List
+
+## Unstyled
+
+Use `unstyled` to remove the bullets or numbers from a list
+
+<Canvas>
+  <Story name="Unstyled" args={{ unstyled: true }}>
+    {ListUnorderedTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## None
+
+Use `none` to remove the bullets or numbers from a nested listed (maintains indenting)
+
+<Canvas>
+  <Story name="None" args={{ none: true }}>
+    {ListConcatTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Spaced
+
+Add `spaced` to increase the white space between the items, and make them visually separate and distinct
+
+<Canvas>
+  <Story name="Spaced" args={{ spaced: true }}>
+    {ListUnorderedTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Inline
+
+Use `inline` to horizontally align list items
+
+<Canvas>
+  <Story name="Inline" args={{ inline: true }}>
+    {ListUnorderedTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Horizontal
+
+Use `horizontal` to align definitions in the same horizontal line as their their definition term
+
+<Canvas>
+  <Story name="Horizontal" args={{ horizontal: true }}>
+    {ListDefinitionTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Border
+
+Use `border` to remove borders from dl horizontal lists
+
+<Canvas>
+  <Story name="Border" args={{ horizontal: true, border: false }}>
+    {ListDefinitionTemplate.bind({})}
+  </Story>
+</Canvas>

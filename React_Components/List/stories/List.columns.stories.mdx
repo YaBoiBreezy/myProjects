@@ -1,0 +1,58 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { List } from '../..';
+
+<Meta title="Components/List/Columns" component={List} />
+
+export const ListTemplate = (args) => {
+  return (
+    <List {...args}>
+      <li>element 1</li>
+      <li>element 2</li>
+      <li>element 3</li>
+      <li>element 4</li>
+      <li>element 5</li>
+      <li>element 6</li>
+      <li>element 7</li>
+      <li>element 8</li>
+      <li>element 9</li>
+      <li>element 10</li>
+      <li>element 11</li>
+      <li>element 12</li>
+    </List>
+  );
+};
+
+# List
+
+## Column Count
+
+Use `colCount` to break your list into 2, 3 or 4 columns
+
+<Canvas>
+  <Story name="Count" args={{ colCount: 3 }}>
+    {ListTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+
+Use `columnSize` to set the size of the columns to `xxs` `xs` `sm` `md` `lg` `xl`
+
+<Canvas>
+  <Story name="Size" args={{ colCount: 2, columnSize: 'xs' }}>
+    {ListTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Default to Maximum
+
+When the list is too wide for the browser, it will default to the maximum number of columns that will fit
+
+set `colCountDefaultMax` to false to make the list default to 1 column instead (not recommended)
+
+<Canvas>
+  <Story name="Default" args={{ colCount: 4, colCountDefaultMax: true }}>
+    {ListTemplate.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,32 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { FootnoteLink } from '../..';
+import { FootnoteSection } from '../..';
+
+<Meta title="Components/Footnote/Default" component={FootnoteSection} />
+
+# Footnote
+
+## Default Link
+
+Make a default FootnoteLink to link to the FootnoteSection itself by leaving value empty
+
+## Example
+
+<Canvas>
+  <span>
+    <p>
+      Below is a default link to the footnotes section normally found at the
+      bottom of the page. Since no footnote is specified, it will link to the
+      footnote section itself
+    </p>
+    <FootnoteLink />
+    <p>And now, the footnote section itself</p>
+    <FootnoteSection>
+      <FootnoteSection.Footnote
+        value="1"
+        children={<p>Example of a standard footnote</p>}
+      />
+    </FootnoteSection>
+  </span>
+</Canvas>

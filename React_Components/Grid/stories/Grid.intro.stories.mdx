@@ -1,0 +1,80 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { Grid } from '../..';
+
+<Meta
+  title="Components/Grid/Intro"
+  component={Grid}
+  subcomponents={{ 'Grid.Row': Grid.Row, 'Grid.Cell': Grid.Cell }}
+/>
+
+# Grid
+
+Use to organize data into rows and columns in order to create data cells.
+
+## Example
+
+<Canvas>
+  <Grid>
+    <Grid.Row>
+      <Grid.Cell smWidth={6}>Cell 1</Grid.Cell>
+      <Grid.Cell smWidth={6}>Cell 2</Grid.Cell>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Cell smWidth={3}>Cell 3</Grid.Cell>
+      <Grid.Cell smWidth={2}>Cell 4</Grid.Cell>
+      <Grid.Cell smWidth={3}>Cell 5</Grid.Cell>
+      <Grid.Cell smWidth={4}>Cell 6</Grid.Cell>
+    </Grid.Row>
+  </Grid>
+</Canvas>
+
+## example with fluid
+
+<Canvas>
+  <Grid fluid>
+    <Grid.Row>
+      <Grid.Cell smWidth={6}>Cell 1</Grid.Cell>
+      <Grid.Cell smWidth={6}>Cell 2</Grid.Cell>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Cell smWidth={3}>Cell 3</Grid.Cell>
+      <Grid.Cell smWidth={2}>Cell 4</Grid.Cell>
+      <Grid.Cell smWidth={3}>Cell 5</Grid.Cell>
+      <Grid.Cell smWidth={4}>Cell 6</Grid.Cell>
+    </Grid.Row>
+  </Grid>
+</Canvas>
+
+<Canvas>
+  <div class="container-fluid text-center">
+    <div class="text-center">
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <div class="well well-md brdr-rds-0">
+            <p>.col-xs-6 .col-md-3</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <div class="well well-md brdr-rds-0">
+            <p>.col-xs-6 .col-md-3</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <div class="well well-md brdr-rds-0">
+            <p>.col-xs-6 .col-md-3</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <div class="well well-md brdr-rds-0">
+            <p>.col-xs-6 .col-md-3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Canvas>
+
+## Available Props
+
+<ArgsTable />

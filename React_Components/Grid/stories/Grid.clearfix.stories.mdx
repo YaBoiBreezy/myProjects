@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { Grid } from '../..';
+
+<Meta
+  title="Components/Grid/ClearFix"
+  component={Grid}
+  subcomponents={{ 'Grid.Row': Grid.Row, 'Grid.Cell': Grid.Cell }}
+/>
+
+# Grid
+
+## Clear Fix
+
+Use to force breakpoints in content. With the four tiers of grids available, issues can arise. </ br>
+At certain breakpoints, columns don't always clear properly for example, if one column is taller than the other. </ br>
+To fix that, use a combination of a .clearfix and the <a href="https://wet-boew.github.io/wet-boew-styleguide/design/visible-en.html" target="_blank">
+invisible and visible classes</a>
+
+## Example
+
+<Canvas>
+  <p>hi</p>
+</Canvas>

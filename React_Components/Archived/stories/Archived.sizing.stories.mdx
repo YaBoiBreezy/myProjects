@@ -1,0 +1,34 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Archived } from '../..';
+
+<Meta
+  title="Components/Archived/Options"
+  component={Archived}
+  subcomponents={{ 'Archived.Button': Archived.Button }}
+/>
+
+export const ArchivedTemplate = (args) => {
+  return <Archived {...args}></Archived>;
+};
+
+# Archived
+
+## Language
+
+using the `english` prop it is possible to set the language of the Archived to english `true` or french `false`
+
+## Optional link
+
+using the `content` prop it is possible to add a link to a replacement page (if one exists) and explain why the current page was archived
+
+## Example to fiddle with
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{ english: true, content: 'This is the content' }}
+  >
+    {ArchivedTemplate.bind({})}
+  </Story>
+</Canvas>

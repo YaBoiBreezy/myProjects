@@ -1,0 +1,93 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { MultimediaPlayer } from '../..';
+
+<Meta title="Components/MultimediaPlayer/Title" component={MultimediaPlayer} />
+
+export const VideoTitleTemplate = (args) => (
+  <span>
+    <figure class="wb-mltmd">
+      <video {...args} controls>
+        <source
+          type="video/webm"
+          src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.webm"
+        />
+        <source
+          type="video/mp4"
+          src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.mp4"
+        />
+      </video>
+      <figcaption>
+        <p>this is the figcaption, not the title</p>
+      </figcaption>
+    </figure>
+  </span>
+);
+
+export const YoutubeTitleTemplate = (args) => (
+  <span>
+    <figure class="wb-mltmd">
+      <video {...args} controls>
+        <source
+          type="video/youtube"
+          src="https://www.youtube.com/watch?v=9znKJqnFuuY"
+        />
+      </video>
+      <figcaption>
+        <p>this is the figcaption, not the title</p>
+      </figcaption>
+    </figure>
+  </span>
+);
+
+export const AudioTitleTemplate = (args) => (
+  <span>
+    <figure class="wb-mltmd">
+      <audio {...args} controls>
+        <source
+          src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3"
+          type="audio/mp3"
+        />
+        <source
+          src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.ogg"
+          type="audio/ogg"
+        />
+      </audio>
+      <figcaption>
+        <p>this is the figcaption, not the title</p>
+      </figcaption>
+    </figure>
+  </span>
+);
+
+# Multimedia Player
+
+## Title
+
+Add a `title` attribute to the `<video>` or `<audio>` element with the value being the title of the multimedia
+
+hover your mouse over the media to see the title popup
+
+## Example Video
+
+<Canvas>
+  <Story name="Video Title" args={{ title: 'this is the title' }}>
+    {VideoTitleTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Example Youtube
+
+<Canvas>
+  <Story name="Youtube Title" args={{ title: 'this is the title' }}>
+    {YoutubeTitleTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Example Audio
+
+<Canvas>
+  <Story name="Audio Title" args={{ title: 'this is the title' }}>
+    {AudioTitleTemplate.bind({})}
+  </Story>
+</Canvas>

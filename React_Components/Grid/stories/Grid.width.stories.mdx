@@ -1,0 +1,60 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Grid } from '../..';
+
+<Meta
+  title="Components/Grid/Width"
+  component={Grid}
+  subcomponents={{ 'Grid.Row': Grid.Row, 'Grid.Cell': Grid.Cell }}
+/>
+
+export const Template = (args) => (
+  <Grid fluid>
+    <Grid.Row>
+      <Grid.Cell {...args}>
+        Edit my width to see Cell 2 change position!
+      </Grid.Cell>
+      <Grid.Cell xsWidth={1} smWidth={1} mdWidth={1} lgWidth={1}>
+        Cell 2
+      </Grid.Cell>
+    </Grid.Row>
+  </Grid>
+);
+
+# Grid Width
+
+One row has a width of 12. Use the `xsWidth`, `smWidth`, `mdWidth`, `lgWidth` attributes to specify the width (out of 12)
+
+that a given cell will have on a given viewport size (xs, sm, md, lg)
+
+## example xsWidth
+
+<Canvas>
+  <Story name="xsWidth" args={{ xsWidth: 6 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## example smWidth
+
+<Canvas>
+  <Story name="smWidth" args={{ smWidth: 4 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## example mdWidth
+
+<Canvas>
+  <Story name="mdWidth" args={{ mdWidth: 8 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## example lgWidth
+
+<Canvas>
+  <Story name="lgWidth" args={{ lgWidth: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,33 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { Pagination, PaginationButton } from '../..';
+
+<Meta 
+    title="Components/Pagination/Intro" 
+    component={Pagination} 
+    subcomponents={{'Pagination.Button': Pagination.Button}}
+/>
+
+# Pagination
+
+Use a pagination index for long documents that are best broken up over several pages. <br/>
+A user can select a specific page within a document through either the "Next", "Previous", or (if present) the numeric pagination hyperlinks.
+
+## Example
+
+<Canvas>
+  <ul class="pagination">
+    <li><a href="#" rel="prev">Previous</a></li>
+    <li><a href="#">1 <span class="wb-inv">Go to Page 1</span></a></li>
+    <li><a href="#">2 <span class="wb-inv">Go to Page 2</span></a></li>
+    <li><a href="#">... <span class="wb-inv">Go to Page ...</span></a></li>
+    <li><a href="#">7 <span class="wb-inv">Go to Page 7</span></a></li>
+    <li><a href="#" rel="next">Next</a></li>
+  </ul>
+</Canvas>
+
+## Available Props
+
+<ArgsTable />
+
+

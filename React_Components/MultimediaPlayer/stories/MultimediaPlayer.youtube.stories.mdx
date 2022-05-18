@@ -1,0 +1,66 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { MultimediaPlayer } from '../..';
+
+<Meta title="Components/MultimediaPlayer/Sizing" component={MultimediaPlayer} />
+
+export const MultimediaPlayerTemplate = (args) => {
+  return (
+    <MultimediaPlayer {...args}>
+      <li>
+        <a href="#" rel="prev">
+          Previous
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          1 <span class="wb-inv">Go to Page 1</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          2 <span class="wb-inv">Go to Page 2</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" rel="next">
+          Next
+        </a>
+      </li>
+    </MultimediaPlayer>
+  );
+};
+
+# MultimediaPlayer
+
+using the `size` prop it is possible to set the size of the MultimediaPlayer to large `lg` or small `sm`
+
+## Default
+
+Use for typical MultimediaPlayer
+
+<Canvas>
+  <Story name="Default" args={{ children: '' }}>
+    {MultimediaPlayerTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Large
+
+Use when the MultimediaPlayer needs additional prominence on the page. <br/>Since the default buttons already create prominence and a call to action, there is limited value/need to increasing their size
+
+<Canvas>
+  <Story name="Large" args={{ children: '', size: 'lg' }}>
+    {MultimediaPlayerTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Small
+
+Use when the MultimediaPlayer appears in a small section of space. This reduces the button size to maximize the amount of buttons that appear in a single row
+
+<Canvas>
+  <Story name="Small" args={{ children: '', size: 'sm' }}>
+    {MultimediaPlayerTemplate.bind({})}
+  </Story>
+</Canvas>

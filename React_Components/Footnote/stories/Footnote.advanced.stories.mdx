@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { FootnoteLink } from '../..';
+import { FootnoteSection } from '../..';
+
+<Meta title="Components/Footnote/Advanced" component={FootnoteSection} />
+
+# Footnote
+
+## Custom Names
+
+Footnotes are generally denoted by numbers, but may also be represented by other kinds of indicators, such as single letters or symbols.
+
+The `value` attribute can be safely substituted with alternate kinds of indicators.
+
+## Example
+
+<Canvas>
+  <span>
+    <FootnoteLink value="B" />
+    <FootnoteLink value="Hello" />
+    <FootnoteLink value="#@>" />
+    <FootnoteSection>
+      <FootnoteSection.Footnote value="B" children={<p>B is a letter</p>} />
+      <FootnoteSection.Footnote
+        value="Hello"
+        children={<p>Hello is not a number, but it still works</p>}
+      />
+      <FootnoteSection.Footnote value="#@>" children={<p>#@> also works</p>} />
+    </FootnoteSection>
+  </span>
+</Canvas>
+
+## Editable Examples
+
+export const LinkTemplate = (args) => <FootnoteLink {...args} />;
+export const SectionTemplate = (args) => (
+  <FootnoteSection>
+    <FootnoteSection.Footnote {...args} children={<p>Still works!</p>} />{' '}
+  </FootnoteSection>
+);
+
+<Canvas>
+  <Story name="Link Value" args={{ value: 'TRY ME!' }}>
+    {LinkTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Section Value" args={{ value: '$' }}>
+    {SectionTemplate.bind({})}
+  </Story>
+</Canvas>

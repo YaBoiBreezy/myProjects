@@ -1,0 +1,59 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Slider } from '../..';
+
+<Meta title="Components/Slider/Values" component={Slider} />
+
+export const Template = (args) => <Slider {...args} />;
+
+# Slider
+
+Using the `max` and `min` props it is possible to set the upper and lower bounds of the `Slider`
+
+## Min
+
+The **minimum** attribute that the Slider starts from can be set using the `min` prop
+
+In this example the `min` is set to `90`, the `max` defaults to `100`, and the value is `95` so the Slider is half full
+
+<Canvas>
+  <Story name="Min" args={{ min: 90, value: 95 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Max
+
+The **maximum** attribute that the progress bar reaches can be set using the `max` attribute
+
+In this example the `max` is set to `50`, the `min` defaults to `0`, and the value is `25` so the Slider is half full
+
+<Canvas>
+  <Story name="Max" args={{ max: 50, value: 25 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Step
+
+The **step** attribute is how far apart the valid slider positions are, and can be set using the `step` attribute
+
+In this example the `min` defaults to `0`, the `max` is set to `20`, and the step is `4` so there are 6 valid positions: 0, 4, 8, 12, 16, 20
+
+<Canvas>
+  <Story name="Step" args={{ max: 20, step: 4 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Value
+
+The **value** attribute is where the slider starts, and can be set using the `value` attribute
+
+In this example the `min` defaults to `0`, the `max` is set to `40`, and the value is `6` so the circle is near the left side
+
+<Canvas>
+  <Story name="Value" args={{ max: 40, value: 6 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,56 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Pagination } from '../..';
+import { PaginationButton } from '../..';
+
+<Meta 
+    title="Components/Pagination/Enhanced" 
+    component={Pagination} 
+    subcomponents={{'Pagination.Button': Pagination.Button}}
+/>
+
+export const PaginationActiveTemplate = (args) => {
+  return (
+    <ul class="pagination">
+        <li><a href="#" rel="prev">Previous</a></li>
+        <Pagination.Button {...args}></Pagination.Button>
+        <li><a href="#">2 <span class="wb-inv">Go to Page 2</span></a></li>
+        <li><a href="#" rel="next">Next</a></li>
+  </ul>
+  );
+};
+
+export const PaginationDisabledTemplate = (args) => {
+  return (
+    <ul class="pagination">
+        <Pagination.Button {...args}></Pagination.Button>
+        <li><a href="#">1 <span class="wb-inv">Go to Page 1</span></a></li>
+        <li><a href="#">2 <span class="wb-inv">Go to Page 2</span></a></li>
+        <li><a href="#" rel="next">Next</a></li>
+  </ul>
+  );
+};
+
+# Pagination
+
+using the `active` and `disabled` props it is possible to set the enhanced values of the `paginationButton`
+
+## Active
+
+Use to indicate the current page that the user is on
+
+<Canvas>
+    <Story name="Active" args={{active: true, disabled: false, value: '1'}}>
+        {PaginationActiveTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Disabled
+
+Use to hide unnecessary navigation, for example a "Previous" button if the user is on "Page 1" of a content section
+
+<Canvas>
+    <Story name="Disabled" args={{active: false, disabled: true, value: 'prev'}}>
+        {PaginationDisabledTemplate.bind({})}
+    </Story>
+</Canvas>

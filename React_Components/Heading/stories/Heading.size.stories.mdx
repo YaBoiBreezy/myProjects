@@ -1,0 +1,73 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Heading } from '../../';
+
+<Meta title="Components/Heading/Size" component={Heading} />
+
+export const HeadingTemplate = (args) => <Heading {...args} />;
+
+# Heading
+
+Use headings so the search engine can properly rank your content. Headings are ranked more important than regular text. Choose headings strategically.
+
+The `<h1>` is the most important; the `<h6>` is the least important.
+
+Use the `size` attribute to set it.
+
+## Example
+
+<Canvas>
+  <Story
+    name="h1"
+    args={{
+      size: 'h1',
+      text: 'Heading content',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+  <Story
+    name="h2"
+    args={{
+      size: 'h2',
+      text: 'Heading content',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+  <Story
+    name="h3"
+    args={{
+      size: 'h3',
+      text: 'Heading content',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+  <Story
+    name="h4"
+    args={{
+      size: 'h4',
+      text: 'Heading content',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+  <Story
+    name="h5"
+    args={{
+      size: 'h5',
+      text: 'Heading content',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+  <Story
+    name="h6"
+    args={{
+      size: 'h6',
+      text: 'Heading content',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Canvas>

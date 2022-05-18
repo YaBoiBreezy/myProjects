@@ -1,0 +1,79 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { FootnoteLink } from '../..';
+import { FootnoteSection } from '../..';
+
+<Meta
+  title="Components/Footnote/Multiple"
+  component={FootnoteSection}
+  subcomponents={{
+    FootnoteLink,
+    'FootnoteSection.Footnote': FootnoteSection.Footnote,
+  }}
+/>
+
+export const Template = (args) => <p {...args}>stuff</p>;
+
+# Multiple
+
+## Multiple Sub-Links
+
+Footnote links that go to the same Footnote must differentiate themselves using the `subValue` attribute, so the Footnote will know which instance of the link to return to
+
+To apply, simply give each FootnoteLink of a given `value` its own custom `subValue`
+
+<Canvas>
+  <span>
+    <FootnoteLink value="1" subValue="1" />
+    <FootnoteLink value="1" subValue="2" />
+    <FootnoteLink value="1" subValue="3" />
+    <FootnoteLink value="1" subValue="4" />
+    <FootnoteSection>
+      <FootnoteSection.Footnote
+        value="1"
+        children={
+          <span>
+            <p>
+              This footnote will return to the last FootnoteLink with value="1"
+              that was clicked by the user
+            </p>
+          </span>
+        }
+      />
+    </FootnoteSection>
+  </span>
+</Canvas>
+
+## Multiple Links
+
+Text that links to multiple footnotes can simply be given multiple `<FootnoteLink value="..." />` blocks
+
+## Multi-Referenced Footnote
+
+Footnotes that are referenced multiple times are handled automatically, and will by default return to the first link that goes to them
+
+`<FootnoteSection.Footnote value="..." children={...}/>`
+
+## Multi-Paragraph Footnote
+
+Footnotes containing two or more paragraphs are supported. They can take the form of either a standard or multi-referenced footnote.
+
+`<FootnoteSection.Footnote value="..." children={<span><p>Par1</p><p>Par2</p></span>}/>`
+
+<Canvas>
+  <span>
+    <FootnoteLink value="4" />
+    <FootnoteSection>
+      <FootnoteSection.Footnote
+        value="4"
+        children={
+          <span>
+            <p>Example of a footnote containing multiple paragraphs.</p>
+            <p>Example of a footnote containing multiple paragraphs.</p>
+            <p>Example of a footnote containing multiple paragraphs.</p>
+          </span>
+        }
+      />
+    </FootnoteSection>
+  </span>
+</Canvas>

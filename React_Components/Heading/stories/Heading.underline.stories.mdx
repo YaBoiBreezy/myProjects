@@ -1,0 +1,26 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Heading } from '../../';
+
+<Meta title="Components/Heading/Underline" component={Heading} />
+
+export const HeadingTemplate = (args) => <Heading {...args} />;
+
+# Heading
+
+Use the `underline` attribute to add an underline to a heading
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      size: 'h1',
+      text: 'Heading content',
+      secondaryText: 'second',
+      underline: true,
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Canvas>

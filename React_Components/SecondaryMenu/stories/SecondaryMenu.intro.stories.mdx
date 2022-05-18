@@ -1,0 +1,52 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { SecondaryMenu } from '../..';
+
+<Meta
+  title="Components/SecondaryMenu/Intro"
+  component={SecondaryMenu}
+  subcomponents={{ 'SecondaryMenu.Item': SecondaryMenu.Item }}
+/>
+
+# SecondaryMenu
+
+Provides an interactive secondary menu
+
+## Recommended Use
+
+The secondary menu should only be used on pages below Canada.ca’s global themes/topics layer.
+Topic pages are part of the wayfinding/themes/topics space and do not permit the use of local navigation menus.
+
+Site destination/task sections which would benefit from allowing users to move laterally can make use of a local menu to facilitate
+navigation between the destinations contained within the last/lowest subtopic in the Canada.ca theme/topic hierarchy.
+
+The section menu should always display the destinations/tasks from the lowest-level subtopic above the user’s location,
+and should not change as the user moves deeper into destination/task content.
+
+Additionally, when a section menu is employed, it should be present on all pages belonging to that lowest-level subtopic.
+So, the section menu should not disappear after a user selects an item from the menu.
+
+The first item in the menu is a non-clickable header, reflecting the title of the last/lowest subtopic.
+The clickable items in the menu are the sibling destinations/pages listed on that lowest subtopic page.
+
+The section menu should only go one level deep. It should not attempt to display links to sub-pages below the current page.
+Instead, all navigation within/below the current page should be handled using elements in the content area.
+
+(Related note: the “related information” block should not be used for navigation. Instead, all links in a page’s content area
+(including related info links) should be contextual; limited to information that is directly related to the current page.
+
+## Example
+
+<Canvas>
+  <SecondaryMenu title="Content Page - Secondary Menu">
+    <SecondaryMenu.Item title="Item 1" />
+    <SecondaryMenu.Item title="Item 2" link="#two" />
+    <SecondaryMenu.Item title="Item 3" />
+    <SecondaryMenu.Item title="Item 4" />
+    <SecondaryMenu.Item title="Item 5" />
+  </SecondaryMenu>
+</Canvas>
+
+## Available Props
+
+<ArgsTable />

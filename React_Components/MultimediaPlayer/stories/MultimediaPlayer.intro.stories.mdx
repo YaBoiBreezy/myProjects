@@ -1,0 +1,136 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { MultimediaPlayer } from '../..';
+
+<Meta title="Components/MultimediaPlayer/Intro" component={MultimediaPlayer} />
+
+# MultimediaPlayer
+
+Provides an accessible multimedia player for embedding video and audio into web pages.
+
+## Example
+
+<Canvas>
+  <span>
+    <figure class="wb-mltmd">
+      <video controls>
+        <source
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <button class="btn btn-info cuepoint" data-cuepoint="45s" type="button">
+        Cue point - 45s
+      </button>
+      <button class="btn btn-info cuepoint" data-cuepoint="01:10" type="button">
+        Cue point - 01:10
+      </button>
+    </figure>
+  </span>
+</Canvas>
+
+<Canvas>
+  <figure
+    class="wb-mltmd"
+    data-wb-mltmd='{"shareUrl": "https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3"}'
+  >
+    <audio title="Ride of the Valkyries">
+      <source
+        src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3"
+        type="audio/mp3"
+      />
+      <source
+        src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.ogg"
+        type="audio/ogg"
+      />
+    </audio>
+    <figcaption>
+      <p>Ride of the Valkyries</p>
+    </figcaption>
+  </figure>
+</Canvas>
+
+<Canvas>
+  <figure class="wb-mltmd">
+    <video
+      poster="https://www.incimages.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg"
+      title="Looking for a Job"
+      autoplay
+      muted
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      type="video/mp4"
+    >
+      <source
+        type="video/mp4"
+        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      />
+      <track
+        src="#inline-captions"
+        kind="captions"
+        data-type="text/html"
+        srclang="en"
+        label="English"
+      />
+    </video>
+    <button class="btn btn-info cuepoint" data-cuepoint="45s" type="button">
+      Cue point - 45s
+    </button>
+    <button class="btn btn-info cuepoint" data-cuepoint="01:10" type="button">
+      Cue point - 01:10
+    </button>
+    <figcaption>
+      <p>
+        Looking for a Job (<a href="cpts-lg-en.html">Transcript</a>)
+      </p>
+    </figcaption>
+  </figure>
+</Canvas>
+
+<Canvas>
+  <figure class="wb-mltmd">
+    <video title="Suspect">
+      <source
+        type="video/youtube"
+        src="https://www.youtube.com/watch?v=9znKJqnFuuY"
+      />
+    </video>
+    <figcaption>
+      <p>Suspect</p>
+    </figcaption>
+  </figure>
+</Canvas>
+
+<Canvas>
+  <div id="calendar1"></div>
+  <div class="wb-calevt" data-calevt-src="calendar1">
+    <ol>
+      <li>
+        <section>
+          <h4>
+            <a href="https://www.canada.gc.ca">Single-Day Event</a>
+          </h4>
+          <p>
+            <time datetime="2011-03-11">March 11th 2011</time>
+          </p>
+          <p>Event Description</p>
+        </section>
+      </li>
+      <li>
+        <section>
+          <h4>
+            <a href="https://www.canada.gc.ca">Multi-Day Event</a>
+          </h4>
+          <p>
+            <time datetime="2011-03-22">March 22nd, 2011</time> to{' '}
+            <time datetime="2011-04-26">April 26th, 2011</time>
+          </p>
+          <p>Event Description</p>
+        </section>
+      </li>
+    </ol>
+  </div>
+</Canvas>
+
+## Available Props
+
+<ArgsTable />

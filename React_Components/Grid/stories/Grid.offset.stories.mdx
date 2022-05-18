@@ -1,0 +1,58 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Grid } from '../..';
+
+<Meta
+  title="Components/Grid/Offset"
+  component={Grid}
+  subcomponents={{ 'Grid.Row': Grid.Row, 'Grid.Cell': Grid.Cell }}
+/>
+
+export const Template = (args) => (
+  <Grid fluid>
+    <Grid.Row>
+      <Grid.Cell xsWidth={1} smWidth={1} mdWidth={1} lgWidth={1}>
+        Cell 1
+      </Grid.Cell>
+      <Grid.Cell {...args}>Edit my offset!</Grid.Cell>
+    </Grid.Row>
+  </Grid>
+);
+
+# Grid Offset
+
+One row has a width of 12. Use the `xsOffset`, `smOffset`, `mdOffset`, `lgOffset` attributes to specify the offset (out of 12)
+
+that a given cell will have on a given viewport size (xs, sm, md, lg)
+
+## example xsOffset
+
+<Canvas>
+  <Story name="xsOffset" args={{ xsOffset: 6, xsWidth: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## example smOffset
+
+<Canvas>
+  <Story name="smOffset" args={{ smOffset: 4, smWidth: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## example mdOffset
+
+<Canvas>
+  <Story name="mdOffset" args={{ mdOffset: 8, mdWidth: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## example lgOffset
+
+<Canvas>
+  <Story name="lgOffset" args={{ lgOffset: 3, lgWidth: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

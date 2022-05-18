@@ -1,0 +1,187 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { Archived } from '../..';
+
+<Meta title="Components/Archived/Intro" component={Archived} />
+
+# Archived
+
+Helps users identify Web pages that have been archived online.
+
+## Use When
+
+This approach is mandatory for Government of Canada Web pages that have been archived online.
+
+A Web page can be archived online if it is:<br/>
+--maintained for reference, research or record keeping purposes;<br/>
+--will not be altered or updated after the date of archiving; and<br/>
+--stored in a digital repository.<br/>
+Examples include; a new policy that has replaced an old policy, older versions of reports, events that have happened in the past (such as conferences).
+
+## English pages
+
+Add the following markup at the start of the content area of the page (after the h1)
+
+<Canvas>
+  <section
+    id="Archived"
+    className="alert alert-warning wb-inview"
+    data-inview="archived-bnr"
+  >
+    <h2>This page has been archived on the Web</h2>
+    <p>
+      Information identified as archived is provided for reference, research or
+      recordkeeping purposes. It is not subject to the Government of Canada Web
+      Standards and has not been altered or updated since it was archived.
+      Please contact us to request a format other than those available.
+    </p>
+  </section>
+  <section
+    id="archived-bnr"
+    className="wb-overlay modal-content overlay-def wb-bar-t"
+  >
+    <header>
+      <h2 className="wb-inv">Archived</h2>
+    </header>
+    <p>
+      <a href="#archived">This page has been archived on the Web.</a>
+    </p>
+  </section>
+</Canvas>
+
+## Optional
+
+Add a paragraph after the first h2 providing a link to a replacement (if one exists) and explaining why the current page was archived.
+
+<Canvas>
+  <section
+    id="Archived"
+    className="alert alert-warning wb-inview"
+    data-inview="archived-bnr"
+  >
+    <h2>This page has been archived on the Web</h2>
+    <p>
+      The{' '}
+      <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227">
+        Standard on Web Usability
+      </a>{' '}
+      replaces this content. This content is archived because Common Look and
+      Feel 2.0 Standards have been rescinded.
+    </p>
+    <p>
+      Information identified as archived is provided for reference, research or
+      recordkeeping purposes. It is not subject to the Government of Canada Web
+      Standards and has not been altered or updated since it was archived.
+      Please contact us to request a format other than those available.
+    </p>
+  </section>
+  <section
+    id="archived-bnr"
+    className="wb-overlay modal-content overlay-def wb-bar-t"
+  >
+    <header>
+      <h2 className="wb-inv">Archived</h2>
+    </header>
+    <p>
+      <a href="#archived">This page has been archived on the Web.</a>
+    </p>
+  </section>
+</Canvas>
+
+## French pages
+
+Add the following markup at the start of the content area of the page (after the h1)
+
+<Canvas>
+  <section
+    id="archived"
+    class="alert alert-warning wb-inview"
+    data-inview="archived-bnr"
+  >
+    <h2>Cette page Web a été archivée dans le Web</h2>
+    <p>
+      L’information dont il est indiqué qu’elle est archivée est fournie à des
+      fins de référence, de recherche ou de tenue de documents. Elle n’est pas
+      assujettie aux normes Web du gouvernement du Canada et elle n’a pas été
+      modifiée ou mise à jour depuis son archivage. Pour obtenir cette
+      information dans un autre format, veuillez communiquer avec nous.
+    </p>
+  </section>
+  <section
+    id="archived-bnr"
+    class="wb-overlay modal-content overlay-def wb-bar-t"
+  >
+    <header>
+      <h2 class="wb-inv">Archivée</h2>
+    </header>
+    <p>
+      <a href="#archived">Cette page Web a été archivée dans le Web.</a>
+    </p>
+  </section>
+</Canvas>
+
+## Optional
+
+Add a paragraph after the first h2 providing a link to a replacement (if one exists) and explaining why the current page was archived.
+
+<Canvas>
+  <section
+    id="archived"
+    class="alert alert-warning wb-inview"
+    data-inview="archived-bnr"
+  >
+    <h2>Cette page Web a été archivée dans le Web</h2>
+    <p>
+      La{' '}
+      <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=24227">
+        Norme sur la facilité d'emploi des sites Web
+      </a>{' '}
+      remplace ce contenu. Cette page Web a été archivée parce que les Normes
+      sur la normalisation des sites Internet 2.0 ont étés annulées.
+    </p>
+    <p>
+      L’information dont il est indiqué qu’elle est archivée est fournie à des
+      fins de référence, de recherche ou de tenue de documents. Elle n’est pas
+      assujettie aux normes Web du gouvernement du Canada et elle n’a pas été
+      modifiée ou mise à jour depuis son archivage. Pour obtenir cette
+      information dans un autre format, veuillez communiquer avec nous.
+    </p>
+  </section>
+  <section
+    id="archived-bnr"
+    class="wb-overlay modal-content overlay-def wb-bar-t"
+  >
+    <header>
+      <h2 class="wb-inv">Archivée</h2>
+    </header>
+    <p>
+      <a href="#archived">Cette page Web a été archivée dans le Web.</a>
+    </p>
+  </section>
+</Canvas>
+
+## CSS
+
+Configure the display of the archived message through CSS as needed
+
+```#archived-bnr {
+background-color: #fd0;
+}
+
+#archived-bnr p {
+margin: 0;
+text-align: center;
+}
+
+#archived-bnr a {
+color: #000;
+display: block;
+font-weight: 700;
+padding: 0.75em 44px;
+text-decoration: underline;
+}
+
+#archived-bnr .overlay-close {
+color: #000;
+}
+```

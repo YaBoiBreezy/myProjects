@@ -1,0 +1,22 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { KeyboardKey } from '../..';
+
+<Meta title="Components/KeyboardKey/Advanced" component={KeyboardKey} />
+
+export const KeyboardKeyTemplate = (args) => <KeyboardKey {...args} />;
+
+# Keyboard Key
+
+## Additional Information
+
+Use `<abbr>` inside the `<kbd>` to provide a hidden description of the keyboard key that is being presented, for screen readers
+
+<Canvas>
+  <Story
+    name="Description"
+    args={{ keyValue: 'Enter', description: 'Enter key' }}
+  >
+    {KeyboardKeyTemplate.bind({})}
+  </Story>
+</Canvas>

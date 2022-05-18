@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { Pagination } from '../..';
+
+<Meta 
+    title="Components/Pagination/Pager" 
+    component={Pagination} 
+    subcomponents={{'Pagination.Button': Pagination.Button}}
+/>
+
+# Pager
+
+Use to create a simple pagination of just "Previous" and "Next" links.
+
+## Default
+
+Simple pager class with next and previous buttons
+
+<Canvas>
+  <ul class="pager">
+    <li><a href="#" rel="prev">Previous</a></li>
+    <li><a href="#" rel="next">Next</a></li>
+  </ul>
+</Canvas>
+
+## Full justification buttons
+
+Setting `class="previous"` left-justifies the `previous` button <br/>
+Setting `class="next"` right-justifies the `next` button
+
+<Canvas>
+  <ul class="pager">
+    <li class="previous"><a href="#" rel="prev">Previous</a></li>
+    <li class="next"><a href="#" rel="next">Next</a></li>
+  </ul>
+</Canvas>
+
+## Disabled state (hidden "Previous")
+
+Setting `class="disabled"` hides the `previous` button
+
+<Canvas>
+  <ul class="pager">
+    <li class="previous disabled"><a href="#" rel="prev">Previous</a></li>
+    <li class="next"><a href="#" rel="next">Next</a></li>
+  </ul>
+</Canvas>
+
+## Available Props
+
+<ArgsTable />
+
+

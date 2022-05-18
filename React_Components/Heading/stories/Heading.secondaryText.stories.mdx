@@ -1,0 +1,25 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Heading } from '../../';
+
+<Meta title="Components/Heading/SecondaryText" component={Heading} />
+
+export const HeadingTemplate = (args) => <Heading {...args} />;
+
+# Heading
+
+Use the `secondaryText` attribute to create lighter, secondary text in any heading
+
+## Example
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      size: 'h3',
+      text: 'Heading content',
+      secondaryText: 'secondary text',
+    }}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Canvas>

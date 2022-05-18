@@ -1,0 +1,114 @@
+import { ArgsTable, Canvas, Meta } from '@storybook/addon-docs';
+
+import { List } from '../..';
+
+<Meta title="Components/List/Types" component={List} />
+
+# List
+
+## Unordered List
+
+Use to list items when the order does not explicitly matter
+
+## Example
+
+<Canvas>
+  <List type="ul">
+    <li>hello, this is an unordered list</li>
+    <li>note the bullet points in the left column</li>
+  </List>
+</Canvas>
+
+## Ordered List
+
+Use to list of items when the order does explicitly matter
+
+## Example
+
+<Canvas>
+  <List type="ol">
+    <li>hello, this is an ordered list</li>
+    <li>note the numbers in the left column</li>
+  </List>
+</Canvas>
+
+## Definition List
+
+Use to list data terms with their associated definitions
+
+Use datalists `<dl>` for terms `<dt>` and the associated definitions `<dd>` that follow them
+
+## Example
+
+<Canvas>
+  <List type="dl">
+    <dt>cat</dt>
+    <dd>small furry feline</dd>
+    <dt>dog</dt>
+    <dd>large furry canine</dd>
+  </List>
+</Canvas>
+
+## Lower Alpha List
+
+Use to apply lower case alphabet letters to a an ordered list
+
+Use mainly as a nested second level list
+
+## Example
+
+<Canvas>
+  <List>
+    <li>hello, this is a list with a lowercase alpha ordered sub-list</li>
+    <List type="alpha">
+      <li>hello, this is a lowercase alpha list</li>
+      <li>note the lowercase letters in the left column</li>
+    </List>
+  </List>
+</Canvas>
+
+## Upper Alpha List
+
+Use to apply upper case alphabet letters to a an ordered list
+
+Use mainly in legal documents
+
+## Example
+
+<Canvas>
+  <List type="alpha" upper>
+    <li>hello, this is an uppercase alpha list</li>
+    <li>note the uppercase letters in the left column</li>
+  </List>
+</Canvas>
+
+## Lower Roman List
+
+Use to apply lower case Roman numerals to an ordered list
+
+Use mainly as a nested second level list
+
+<Canvas>
+  <List>
+    <li>hello, this is a list with a lowercase roman ordered sub-list</li>
+    <List type="roman">
+      <li>hello, this is a lowercase roman list</li>
+      <li>note the lowercase roman numerals in the left column</li>
+    </List>
+  </List>
+</Canvas>
+
+## Upper Roman List
+
+Use to apply upper case Roman numerals to an ordered list
+
+Use mainly in legal documents
+
+## Example
+
+<Canvas>
+  <List type="roman" upper>
+    <li>hello, this is an uppercase roman list</li>
+    <li>note the uppercase roman numerals in the left column</li>
+  </List>
+</Canvas>
