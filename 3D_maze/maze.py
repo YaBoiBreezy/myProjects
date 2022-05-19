@@ -113,13 +113,16 @@ def main():
 	       [0,0,0,0,0,0,0,0],
 	       [0,0,0,0,0,0,0,0],
 	       [0,0,0,0,0,0,0,0]]]
-	print("WELCOME TO THE MAZE")
-	print("NOW WITH 3 DIMENSIONS!")
-	print("RECOMMENDED: SHRINK YOUR CONSOLE TO THE HEIGHT OF THE MAZE")
-	print("wasd to move\nq,e to hop up and down\np to pause/quit")
-	print(chr(2)+"<--YOU")
-	print(chr(1)+"<--OPEN SPACE DIRECTLY ABOVE/BELOW YOU")
-	print("MIDDLE MAZE IS YOUR LEVEL, SIDE MAZES ARE ABOVE/BELOW YOU")
+	print("WELCOME TO THE MAZE                                     _____")
+	print("NOW WITH 3 DIMENSIONS!                                       |")
+	print("RECOMMENDED: SHRINK YOUR CONSOLE TO THE HEIGHT OF THE MAZE   |")
+	print("wasd to move, q,e to hop up and down, p to pause/quit        |")
+	print(chr(2)+"<--YOU                                                      |--CORRECT HEIGHT")
+	print(chr(1)+"<--OPEN SPACE DIRECTLY ABOVE/BELOW YOU                      |")
+	print("MIDDLE MAZE IS YOUR LEVEL, SIDE MAZES ARE ABOVE/BELOW YOU    |")
+	print("                                                             |")
+	print("PRESS ENTER TO BEGIN                                         |")
+	input("                                                        _____|")
 	while(x>0):
 		render(maze,x,y,z)
 		x,y,z=move(maze,x,y,z)
