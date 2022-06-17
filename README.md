@@ -1,7 +1,7 @@
 # myProjects
 repository of all my stuff, mostly school work
 
-Note: all my C/C++ stuff is lost in either high school computers or my pc's virtual box, which got deleted when my pc got corrupted
+Note: all my C/C++ stuff is lost in either high school computers or my pc's virtual box, which got deleted when my pc got corrupted <br />
 summaries of all that code:
 
 High school C++: (windows)
