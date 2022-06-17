@@ -1,8 +1,7 @@
 # myProjects
 repository of all my stuff, mostly school work
 
-Note: all my C/C++ stuff is lost in either high school computers or my pc's virtual box, which got deleted when my pc got corrupted <br />
-summaries of all that code:
+Note: all my C/C++ stuff is lost in either high school computers or my pc's virtual box, which got deleted when my pc got corrupted. Summaries of all that code:
 
 High school C++: (windows)
 a bunch of games, including a couple text adventures, real-time maze thing with enemies/keys, basic 2D maze, thing where a stickman blocks incoming projectiles using WASD to move a shield, and a 3D maze which I remade real quick in python (look in the 3D_maze folder)
