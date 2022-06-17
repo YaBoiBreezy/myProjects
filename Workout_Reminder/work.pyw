@@ -24,7 +24,7 @@ done=[]
 
 def popupmsg(done, notDone, msg):
     popup = tk.Tk()
-    popup.geometry("450x200")
+    popup.geometry("500x210")
     tk.Label(popup, text='DONE', font=BIG_FONT).grid(row=1,column=1,sticky='W') 
     tk.Label(popup, text='TODO', font=BIG_FONT).grid(row=1,column=3,sticky='E') 
     tk.Label(popup, text=' ', font=BIG_FONT).grid(row=1,column=2) 
